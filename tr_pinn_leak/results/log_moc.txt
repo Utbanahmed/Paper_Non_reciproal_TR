@@ -1,0 +1,17 @@
+=== 1. PHYSICS ===
+A = 4.9265e-03 m^2, s_L = 4.927e-06 m^2, V0 = 0.0812 m/s
+H_L0 = 20.0102 m  (H0 + friction loss leak->valve 0.0102 m)
+Q_L0 = 9.7615e-05 m^3/s (24.4 % of Q0)
+Z = 26940.3 s/m^2, Z_L = 409982.9 s/m^2, c_L = Z/Z_L = 0.0657
+H_J = Z*Q0 = 10.776 m;  Q0* = 0.5388;  leak reflection -cL/(2+cL) = -0.0318
+R = 2.5507e-02 1/s, r = R L/a = 0.00392
+L/a = 0.15361 s; T* = 2.6040; t0* = 0.2995; tc* = 0.07398; eps = 0.03699
+f_max = 64.95 Hz; lambda_min = 20.05 m; lambda_min/2 = 10.02 m = 0.0501 (nondim)
+derivative filter cut-off 1.5 f_max = 97.4 Hz
+=== 2. MOC ground truth ===
+CHECK (a) PASS: N=500->1000: rel L2 change of d = 4.34e-06, rel max = 9.29e-05 (scattered ds: 7.71e-06)
+CHECK (b) PASS: step at valve 10.794 m vs H_J 10.776 m (err 0.17 %); leak echo half-amplitude time 1.4987 vs t0*+2(1-chi) = 1.4995; echo plateau -0.6775 m = -0.0629 H_J. Spec formula -cL/(2+cL) H_J = -0.3428 m; with the closed-valve doubling 2x(-cL/(2+cL)) H_J = -0.6856 m (ratio measured/2x = 0.988)
+=== 3. TR field, duality, imaging (MOC) ===
+CHECK (c) PASS: duality: int dds^2 = 2.56244e-02; -cL int hb*dh/dt (exact field) = 2.56245e-02 (mismatch 0.00 %); Born (h0 at leak) = 2.68059e-02 (mismatch 4.61 %)
+CHECK (d) PASS: MOC TR image argmax x = 0.4000 (chi = 0.4, error 0.00 lambda_min/2)
+CHECK (e) PASS: classical matched filter argmax x = 0.4000 (error 0.00 lambda_min/2)

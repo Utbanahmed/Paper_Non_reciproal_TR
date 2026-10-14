@@ -1,0 +1,22 @@
+{
+ "a": {
+  "passed": true,
+  "msg": "N=500->1000: rel L2 change of d = 4.34e-06, rel max = 9.29e-05 (scattered ds: 7.71e-06)"
+ },
+ "b": {
+  "passed": true,
+  "msg": "step at valve 10.794 m vs H_J 10.776 m (err 0.17 %); leak echo half-amplitude time 1.4987 vs t0*+2(1-chi) = 1.4995; echo plateau -0.6775 m = -0.0629 H_J. Spec formula -cL/(2+cL) H_J = -0.3428 m; with the closed-valve doubling 2x(-cL/(2+cL)) H_J = -0.6856 m (ratio measured/2x = 0.988)"
+ },
+ "c": {
+  "passed": true,
+  "msg": "duality: int dds^2 = 2.56244e-02; -cL int hb*dh/dt (exact field) = 2.56245e-02 (mismatch 0.00 %); Born (h0 at leak) = 2.68059e-02 (mismatch 4.61 %)"
+ },
+ "d": {
+  "passed": true,
+  "msg": "MOC TR image argmax x = 0.4000 (chi = 0.4, error 0.00 lambda_min/2)"
+ },
+ "e": {
+  "passed": true,
+  "msg": "classical matched filter argmax x = 0.4000 (error 0.00 lambda_min/2)"
+ }
+}
